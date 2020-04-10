@@ -20,10 +20,8 @@ export class SpotifyService {
   }
    getTrack(id: string) {
     const url = `https://api.spotify.com/v1/tracks/${id}`;
-    const headers = new HttpHeaders({
-      Authorization:
-        'Bearer BQCBFLsTjOtjCWF93b7tJhOXqEsPfSN41CixSfei4v4s3JcSDfbskntNhXkXTQdZ_Cw2SmZ8eLTy1HueFYknD-Ps8jRIyjxGBJR0hOwDIXqulL-_cBEJkWk4CfQaYrtrkXNwJ-T936SJEbQ_'
-    });
+   const headers = new HttpHeaders({Authorization: environment.oauthToken});
+
 
     return this.http.get(url, { headers });
   }
