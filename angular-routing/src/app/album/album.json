@@ -1,5 +1,5 @@
 {
-  "albums": {
+"albums": {
     "href": "https://api.spotify.com/v1/search?query=persona&type=album&offset=0&limit=20",
     "items": [
       {

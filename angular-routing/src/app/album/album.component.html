@@ -1,11 +1,11 @@
-<div *ngIf="albums">
-    <h1>{{ albums.name }}</h1>
+<div *ngIf="album">
+    <h1>{{ album.name }}</h1>
     <p>
-        <img src="{{ albums.images[1].url }}">
+        <img src="{{ album.images[1].url }}">
     </p>
-    <p>Artista: {{albums.artists.name}}</p>
-    <p>Data di rilascio: {{albums.release_date}}</p>
-    <p>Numero totale delle traccie: {{albums.total_tracks}}</p>
+    <p>Artista: {{album.artists.name}}</p>
+    <p>Data di rilascio: {{album.release_date}}</p>
+    <p>Numero totale delle traccie: {{album.total_tracks}}</p>
 
 
     <p><a href (click)="back()">Back</a></p>
