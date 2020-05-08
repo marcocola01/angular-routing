@@ -22,11 +22,11 @@ export class LoginComponent implements OnInit {
   }
 
   public login(): void {
-    const scopes = new ScopesBuilder()/* .withScopes(ScopesBuilder.LIBRARY) */.build();
+    const scopes = new ScopesBuilder().withScopes(ScopesBuilder.LIBRARY).build();
     const ac: AuthConfig = {
-      client_id: "3af5f43840144db2a5ef883b56c5fb7e",  // WebPortal App Id. Shoud be config
+      client_id: "d6a2b4b0566b4f07a8c3c57e0b4167e2",  // WebPortal App Id. Shoud be config
       response_type: "token",
-      redirect_uri: "http://7jpsan.github.io/spotify-auth-demo/authorized",  // My URL
+      redirect_uri: "https://4200-af7871bb-40d8-4bba-8fed-db7f252e7a50.ws-eu01.gitpod.io/",  // My URL
       state: "",
       show_dialog: true,
       scope: scopes

@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { filter } from 'rxjs/operators/filter';
 
 @Component({
-  selector: 'app-app',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
