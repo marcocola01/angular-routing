@@ -1,65 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AlbumComponent } from './album/album.component';
 import { ArtistComponent } from './artist/artist.component';
+import { AlbumComponent } from './album/album.component';
 import { TrackComponent } from './track/track.component';
 import { AboutComponent } from './about/about.component';
 import { SearchComponent } from './search/search.component';
-import { InfoService }  from './info.service';
-import { UserComponent } from './user.component';
-import { LoginComponent } from './login.component';
-import { SpotifyAuthModule } from 'spotify-auth';
-import { SpotifyAuthInterceptor2 } from './spotify-auth.interceptor';
-import { Routes, RouterModule, Router } from '@angular/router';
-
-const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'user',
-    pathMatch: 'full'
-  },
-  {
-    path: 'user',
-    component: UserComponent
-  },
-
-  {
-    path: 'login',
-    component: LoginComponent
-  },
-  SpotifyAuthModule.authRoutes()[0]
-];
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlbumComponent,
     ArtistComponent,
+    AlbumComponent,
     TrackComponent,
     AboutComponent,
-    SearchComponent
+    SearchComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
-    SpotifyAuthModule.forRoot(),
-    RouterModule.forRoot(routes, {
-      // useHash: true
-    }),
+    HttpClientModule
   ],
-providers: [
-    InfoService,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: SpotifyAuthInterceptor2, //Force interception.
-      multi: true
-    }
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
