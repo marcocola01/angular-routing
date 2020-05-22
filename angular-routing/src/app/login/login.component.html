@@ -1,6 +1,16 @@
-<span>Login with</span>
-<div *ngIf="!isAuthorized" class="img-container">
-  <img src="assets/spotify.png" (click)="login()" />
-</div>
-
-<button  *ngIf="isAuthorized" (click)="logout()">logout</button>
+<ul>
+  <li>
+    <a routerLink="user">User Info</a>
+  </li>
+  <li>
+    <a routerLink="albums">Albums Info</a>
+  </li>
+  <li>
+    <a routerLink="login">Login with SpotifyAuth</a>
+  </li>
+  <li>
+    <a (click)="logout()">Logout</a>
+  </li>
+</ul>
+<hr>
+<router-outlet></router-outlet>
