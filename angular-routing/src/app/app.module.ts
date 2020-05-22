@@ -9,8 +9,8 @@ import { TrackComponent } from './track/track.component';
 import { AboutComponent } from './about/about.component';
 import { SearchComponent } from './search/search.component';
 import { LoginComponent } from './login/login.component';
-import {AlbumsComponent} from './login/album.component';
-import {UserComponent} from './login/user.component';
+import {UserComponent} from './user/user.component';
+import { UsersAlbumsComponent } from './users-albums/users-albums.component';
 
 
 
@@ -24,7 +24,7 @@ import {UserComponent} from './login/user.component';
     SearchComponent,
     LoginComponent,
     UserComponent,
-    AlbumsComponent
+    UsersAlbumsComponent
   ],
   imports: [
     BrowserModule,

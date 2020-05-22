@@ -42,5 +42,21 @@ getAlbum(id : string)
     return this.http.get(url, {headers });
   }
 
+getUser(id : string)
+  {
+    const url = `https://api.spotify.com/v1/me/${id}`;
+    const headers = new HttpHeaders({Authorization: environment.oauthToken});
+
+    return this.http.get(url, {headers });
+  }
+
+  getUserAlbums(id : string)
+  {
+    const url = `https://api.spotify.com/v1/me/playlists/${id}`;
+    const headers = new HttpHeaders({Authorization: environment.oauthToken});
+
+    return this.http.get(url, {headers });
+  }
+
 }
 
