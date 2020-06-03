@@ -20,7 +20,7 @@ export class SpotifyService {
   }
 
   getFavorite() {
-    const url = `https://api.spotify.com/v1/me/top/albums`;
+    const url = `https://api.spotify.com/v1/me/albums`;
     const headers = new HttpHeaders({Authorization: this.auth.getToken()});
     let obsTracks = this.http.get(url, { headers });
     return obsTracks;
