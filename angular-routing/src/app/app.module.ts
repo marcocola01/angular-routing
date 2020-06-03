@@ -9,9 +9,7 @@ import { TrackComponent } from './track/track.component';
 import { AboutComponent } from './about/about.component';
 import { SearchComponent } from './search/search.component';
 import { LoginComponent } from './login/login.component';
-import {UserComponent} from './user/user.component';
-import { UsersAlbumsComponent } from './users-albums/users-albums.component';
-
+import { FavoriteComponent } from './favorite/favorite.component';
 
 
 @NgModule({
@@ -23,8 +21,7 @@ import { UsersAlbumsComponent } from './users-albums/users-albums.component';
     AboutComponent,
     SearchComponent,
     LoginComponent,
-    UserComponent,
-    UsersAlbumsComponent
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,
